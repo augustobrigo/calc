@@ -1,0 +1,47 @@
+<div class="container">
+  <h1>{{ title }}</h1>
+  <p>Musin Propietario Copyright(c)</p>
+
+  <div class="row justify-content-center">
+    <div class="col-6 calculator">
+      <input type="text" [(ngModel)]="total" class="form-control form-control-sm mb-2 disminuirTama" maxlength="20" />
+
+
+
+      <div class="button-grid">
+        <div class="row">
+          <button #num1 class="btn btn-info col-3 m-2" (click)="calcularTotal(num1)">1</button>
+          <button #num2 class="btn btn-info col-3 m-2" (click)="calcularTotal(num2)">2</button>
+          <button #num3 class="btn btn-info col-3 m-2" (click)="calcularTotal(num3)">3</button>
+        </div>
+
+        <div class="row">
+          <button #num4 class="btn btn-info col-3 m-2" (click)="calcularTotal(num4)">4</button>
+          <button #num5 class="btn btn-info col-3 m-2" (click)="calcularTotal(num5)">5</button>
+          <button #num6 class="btn btn-info col-3 m-2" (click)="calcularTotal(num6)">6</button>
+        </div>
+
+        <div class="row">
+          <button #num7 class="btn btn-info col-3 m-2" (click)="calcularTotal(num7)">7</button>
+          <button #num8 class="btn btn-info col-3 m-2" (click)="calcularTotal(num8)">8</button>
+          <button #num9 class="btn btn-info col-3 m-2" (click)="calcularTotal(num9)">9</button>
+        </div>
+
+        <div class="row">
+          <button #x class="btn btn-info col-3 m-2 operacion" (click)="operador(x)">x</button>
+          <button #num0 class="btn btn-info col-3 m-2" (click)="calcularTotal(num0)">0</button>
+          <button #mas class="btn btn-info col-3 m-2 operacion" (click)="operador(mas)">+</button>
+          <button #menos class="btn btn-info col-3 m-2 operacion" (click)="operador(menos)">-</button>
+          <button #dividir class="btn btn-info col-3 m-2 operacion" (click)="operador(dividir)">/</button>
+          <button #igual id="igual" class="btn btn-info col-3 m-2 operacion" (click)="operador(igual)">=</button>
+        </div>
+      </div>
+
+      <div class="row">
+        <button #borrar id="borrar" class="btn btn-danger col-10 m-2" (click)="operador(borrar)">C</button>
+      </div>
+    </div>
+
+    <div class="col-2"></div>
+  </div>
+</div>

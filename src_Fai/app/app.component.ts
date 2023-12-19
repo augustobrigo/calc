@@ -7,9 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'calc';
-
-  
-    valor: string = "";
+  valor: string = "";
   operacion: string = "";
   cal: boolean=false;
 borrar() {
@@ -22,13 +20,7 @@ operar(num: String) {
       this.operacion += num;
       this.valor = "";
     }else{
-      if(num === "pd"){
-        this.valor += "(";
-      }else if(num === "pi"){
-        this.valor += ")";
-      }else{
-        this.valor += num;
-      }
+      this.valor += num;
     }
   }else{
     this.valor = num.toString();
@@ -51,5 +43,4 @@ calcular() {
     }
   }
 }
-
 }
